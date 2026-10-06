@@ -426,3 +426,172 @@ footer {
 .contact .button:hover {
   transform: translateY(-4px) scale(1.02);
 }
+/* =========================
+   Premium Hero
+   ========================= */
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      #ffffff 0%,
+      #f3f3f0 45%,
+      #e8e8e4 100%
+    );
+}
+
+.hero::before {
+  content: "BETTER.";
+
+  position: absolute;
+
+  font-size: clamp(120px, 25vw, 360px);
+
+  font-weight: 900;
+
+  color: rgba(0, 0, 0, 0.025);
+
+  letter-spacing: -12px;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 800px;
+
+  text-align: center;
+
+  padding: 40px 20px;
+}
+
+.hero-label {
+  margin-bottom: 25px;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  font-weight: 700;
+
+  color: #777;
+}
+
+.hero h1 {
+  margin-bottom: 30px;
+
+  font-size: clamp(42px, 8vw, 80px);
+
+  line-height: 1.15;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: #777;
+}
+
+.hero-description {
+  max-width: 550px;
+
+  margin: 0 auto 40px;
+
+  color: #666;
+
+  font-size: 16px;
+}
+
+.hero-button {
+  padding: 17px 28px;
+
+  font-size: 15px;
+}
+
+.hero-button span {
+  display: inline-block;
+
+  margin-left: 10px;
+
+  transition: transform 0.2s ease;
+}
+
+.hero-button:hover span {
+  transform: translateX(5px);
+}
+
+.hero-scroll {
+  position: absolute;
+
+  bottom: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #888;
+}
+
+.hero-scroll span {
+  font-size: 18px;
+
+  animation: scrollArrow 1.5s infinite;
+}
+
+@keyframes scrollArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+
+/* Smartphone */
+
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: 78vh;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero::before {
+    font-size: 120px;
+  }
+
+}
